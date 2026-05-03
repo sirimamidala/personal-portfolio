@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamidala Siri | Data Scientist & Full Stack Developer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        /* Tailwind customization */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        dark: '#0f172a',
+                    }
+
+                    ,
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-900 text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="container">
+            <a class="navbar-brand font-display font-bold text-2xl tracking-tight" href="#">
+                <span class="text-indigo-500">M.</span>Siri
+            </a>
+            <button class="navbar-toggler border-0 focus:outline-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto space-x-0 lg:space-x-4">
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link hover:text-indigo-400 transition-colors"
+                            href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container px-4">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="space-y-6">
+                        <h5 class="text-indigo-400 font-medium tracking-widest uppercase">Available for opportunities
+                        </h5>
+                        <h1 class="text-5xl lg:text-7xl font-display font-bold leading-tight">
+                            Hi, I'm <span
+                                class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Mamidala
+                                Siri</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl font-display text-slate-300">
+                            I am a <span id="typewriter" class="text-indigo-400"></span>
+                        </h2>
+                        <p class="text-xl text-slate-400 max-w-2xl leading-relaxed">
+                            A final year Data Science student and Full Stack Web Developer. I build data-driven
+                            applications that solve real-world problems.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <a href="#projects"
+                                class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-all shadow-lg shadow-indigo-500/25">View
+                                Projects</a>
+                            <a href="#contact"
+                                class="px-8 py-3 border border-slate-700 hover:border-slate-500 text-white rounded-full font-medium transition-all">Contact
+                                Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-12 lg:mt-0">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                        </div>
+                        <div
+                            class="relative bg-slate-900 ring-1 ring-slate-800 rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square flex items-center justify-center">
+                            <img src="profile.jpg" alt="Mamidala Siri"
+                                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-800/30">
+        <div class="container px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1.5 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-10">
+                    <div class="glass-card p-10 rounded-3xl">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 mb-6 mb-md-0">
+                                <div
+                                    class="w-full aspect-[4/5] md:aspect-square bg-slate-800 rounded-3xl flex items-center justify-center overflow-hidden border border-slate-700">
+                                    <img src="profile.jpg" alt="Mamidala Siri"
+                                        class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                                    Motivated Computer Science undergraduate specializing in Data Science, seeking
+                                    internship or entry-level opportunities to apply my skills in software development,
+                                    data analysis, and problem solving while contributing to impactful real-world
+                                    projects.
+                                </p>
+                                <div class="row g-4">
+                                    <div class="col-6">
+                                        <div class="text-slate-500 text-sm uppercase tracking-wider mb-1">Education
+                                        </div>
+                                        <div class="font-medium">B.Tech in CS (Data Science)</div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-slate-500 text-sm uppercase tracking-wider mb-1">Location</div>
+                                        <div class="font-medium">Telangana, India</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="container px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">Technical Skills</h2>
+                <div class="w-20 h-1.5 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="row g-4">
+                <!-- Programming Languages -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card p-6 rounded-2xl h-full">
+                        <h3 class="text-xl font-display font-bold mb-4 text-indigo-400">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Web Technologies -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card p-6 rounded-2xl h-full">
+                        <h3 class="text-xl font-display font-bold mb-4 text-indigo-400">Web Tech</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">Bootstrap 5</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Science -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card p-6 rounded-2xl h-full">
+                        <h3 class="text-xl font-display font-bold mb-4 text-indigo-400">Data Science</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="glass-card p-6 rounded-2xl h-full">
+                        <h3 class="text-xl font-display font-bold mb-4 text-indigo-400">Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Jupyter</span>
+                            <span class="skill-tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-slate-800/30">
+        <div class="container px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">Experience</h2>
+                <div class="w-20 h-1.5 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l-2 border-slate-700 ml-3 py-2 space-y-12">
+                    <!-- IBM Edunet -->
+                    <div class="relative pl-8">
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(99,102,241,0.5)]">
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold">Full Stack Web Development</h3>
+                                    <div class="text-indigo-400 font-medium">Edunet Foundation in collaboration with IBM
+                                    </div>
+                                </div>
+                                <span class="px-4 py-1 bg-slate-800 rounded-full text-sm text-slate-400">2025</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Built end-to-end web applications using modern stacks and IBM cloud
+                                        tools.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Implemented scalable backend services and responsive frontend designs.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Gained hands-on experience in cloud deployment and industry-standard
+                                        development workflows.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Internship -->
+                    <div class="relative pl-8">
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(99,102,241,0.5)]">
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-display font-bold">Web Development Intern</h3>
+                                    <div class="text-indigo-400 font-medium">Remote</div>
+                                </div>
+                                <span class="px-4 py-1 bg-slate-800 rounded-full text-sm text-slate-400">2024</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400">
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Developed responsive web pages using HTML, CSS, and JavaScript.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Collaborated with team members using Git and GitHub for version
+                                        control.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i class="fas fa-check-circle text-indigo-500 mt-1"></i>
+                                    <span>Implemented user-friendly UI components following modern web standards.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+        <div class="container px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">Featured Projects</h2>
+                <div class="w-20 h-1.5 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="row g-4">
+                <!-- Smart Task -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-card rounded-3xl overflow-hidden h-full group">
+                        <div class="bg-indigo-600/20 aspect-video flex items-center justify-center overflow-hidden">
+                            <i
+                                class="fas fa-tasks text-7xl text-indigo-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-display font-bold mb-3">Smart Task Productivity & Mental Health
+                                Tracker</h3>
+                            <p class="text-slate-400 mb-6">
+                                A full-stack web application integrating task management with mental wellness tracking
+                                to enhance productivity and promote balanced work-life habits.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">HTML</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">CSS</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                                    Live Demo <i class="fas fa-external-link-alt text-xs"></i>
+                                </a>
+                                <a href="#"
+                                    class="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                                    Source code <i class="fab fa-github text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sanitary Kit -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-card rounded-3xl overflow-hidden h-full group">
+                        <div class="bg-purple-600/20 aspect-video flex items-center justify-center overflow-hidden">
+                            <i
+                                class="fas fa-shopping-cart text-7xl text-purple-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-display font-bold mb-3">Customized Sanitary Kit for Women</h3>
+                            <p class="text-slate-400 mb-6">
+                                Built a personalized e-commerce platform enabling users to customize menstrual care kits
+                                with eco-friendly and health-conscious product options.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">HTML</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">CSS</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">JavaScript</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="text-purple-400 hover:text-purple-300 font-medium flex items-center gap-2">
+                                    Live Demo <i class="fas fa-external-link-alt text-xs"></i>
+                                </a>
+                                <a href="#"
+                                    class="text-purple-400 hover:text-purple-300 font-medium flex items-center gap-2">
+                                    Source code <i class="fab fa-github text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tourist Guide -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-card rounded-3xl overflow-hidden h-full group">
+                        <div class="bg-cyan-600/20 aspect-video flex items-center justify-center overflow-hidden">
+                            <i
+                                class="fas fa-map-marked-alt text-7xl text-cyan-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-display font-bold mb-3">Tourist Guide Assistance Guide</h3>
+                            <p class="text-slate-400 mb-6">
+                                An AI-powered travel companion that provides personalized itineraries and local cultural
+                                insights through advanced natural language processing.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">Python</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">OpenAI API</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">Streamlit</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-2">
+                                    Live Demo <i class="fas fa-external-link-alt text-xs"></i>
+                                </a>
+                                <a href="#"
+                                    class="text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-2">
+                                    Source code <i class="fab fa-github text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Storytelling -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-card rounded-3xl overflow-hidden h-full group">
+                        <div class="bg-emerald-600/20 aspect-video flex items-center justify-center overflow-hidden">
+                            <i
+                                class="fas fa-chart-pie text-7xl text-emerald-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-display font-bold mb-3">Immersive Data Driven Storytelling</h3>
+                            <p class="text-slate-400 mb-6">
+                                A visual exploration platform that transforms complex environmental datasets into
+                                interactive, scrolling narratives using D3.js and ScrollMagic.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">D3.js</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">JavaScript</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono">Data Viz</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-2">
+                                    Live Demo <i class="fas fa-external-link-alt text-xs"></i>
+                                </a>
+                                <a href="#"
+                                    class="text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-2">
+                                    Source code <i class="fab fa-github text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-24 bg-slate-800/30">
+        <div class="container px-4">
+            <div class="row g-12">
+                <div class="col-lg-6">
+                    <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-certificate text-indigo-500"></i> Certifications
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-indigo-500/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Edunet Full Stack Web Development</h4>
+                                <p class="text-slate-500 text-sm">IBM SkillsBuild Internship Program</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-indigo-500/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Deloitte Data Analysis Certification</h4>
+                                <p class="text-slate-500 text-sm">Professional development & analytics skills</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-indigo-500/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Intel AI Digital India</h4>
+                                <p class="text-slate-500 text-sm">Foundations of Artificial Intelligence</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-indigo-500/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-award text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Django Full Stack Development</h4>
+                                <p class="text-slate-500 text-sm">Backend architecture & web apps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-12 lg:mt-0">
+                    <h2 class="text-3xl font-display font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-trophy text-purple-500"></i> Achievements
+                    </h2>
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden">
+                        <div class="absolute -right-8 -bottom-8 opacity-10">
+                            <i class="fas fa-medal text-9xl"></i>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-slate-300">Participated in a 24-hour Hackathon challenge, developing a
+                                    prototype within strict time constraints.</p>
+                            </li>
+                            <li class="flex gap-4">
+                                <div class="w-1.5 h-1.5 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <p class="text-slate-300">Earned multiple industry-recognized certifications in AI, data
+                                    analysis, and cybersecurity.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="container px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-display font-bold mb-4">Let's Connect</h2>
+                <p class="text-slate-400 mb-12">I'm currently looking for new opportunities. Whether you have a question
+                    or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="mailto:sirimamidala15@gmail.com"
+                        class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center hover:bg-indigo-600 hover:scale-110 transition-all">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/siri-mamidala" target="_blank"
+                        class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/sirimamidala" target="_blank"
+                        class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center hover:bg-slate-700 hover:scale-110 transition-all">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+                <div class="mt-12">
+                    <a href="mailto:sirimamidala15@gmail.com"
+                        class="px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-bold transition-all inline-block">
+                        Send a Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500">
+        <div class="container">
+            <div class="font-display font-bold text-2xl mb-4">
+                <span class="text-indigo-500">M.</span>Siri
+            </div>
+            <p class="mb-0">© 2026 Mamidala Siri. Developed with ❤️ and modern tech.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Typewriter Effect
+        const text = document.getElementById('typewriter');
+        const phrases = ['Data Scientist', 'Full Stack Developer', 'Problem Solver'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                text.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                text.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 150;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
+</body>
+
+</html>
